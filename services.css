@@ -1,0 +1,86 @@
+/* Mejoras para la sección de Servicios */
+#services {
+    background: #fcfcfc;
+    padding: 6rem 2rem;
+}
+
+
+.services-grid {
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.service-card {
+    padding: 3rem 2rem;
+    background: white;
+    border-top: 4px solid var(--primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--primary);
+    opacity: 0.05;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover::before {
+    transform: rotate(45deg) translateX(50%);
+}
+
+.service-card h3 {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Iconos de servicios */
+.service-card {
+    padding-left: 5rem;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 2.5rem;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.service-card:nth-child(1)::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF6B35"><path d="M22 3H2v10h2v8h2v-8h12v8h2v-8h2V3zm-2 8H4V5h16v6z"/></svg>');
+}
+
+.service-card:nth-child(2)::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF6B35"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 16c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>');
+}
+
+.service-card:nth-child(3)::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF6B35"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6l-5 5 1.41 1.41L12 8.83l3.59 3.58L17 11l-5-5z"/></svg>');
+}
