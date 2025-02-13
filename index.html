@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="contact.css">
 
     <script src="email.min.js"></script>
+
+    <script src="recaptcha.js" async defer></script>
+
 </head>
 <body>
 <header>
@@ -111,6 +114,10 @@
                 <input type="text" name="name" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
                 <textarea name="message" placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+
+                <div class="g-recaptcha" data-sitekey="6Ld_dNYqAAAAAOkqD9GcIC7DaFEGaWFiPLg-2lcL"></div>
+
+
                 <button type="submit" class="btn">Enviar Mensaje</button>
             </form>
 

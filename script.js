@@ -56,20 +56,3 @@ document.querySelectorAll('.service-card').forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// Manejo del formulario
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const form = e.target;
-    form.style.opacity = '0.5';
-    setTimeout(() => {
-        form.reset();
-        form.style.opacity = '1';
-
-        const confirmation = document.createElement('div');
-        confirmation.className = 'form-confirmation';
-        confirmation.textContent = '✓ Message sent successfully!';
-        document.querySelector('.contact-container').appendChild(confirmation);
-        setTimeout(() => confirmation.remove(), 3000);
-
-    }, 1000);
-});
